@@ -6,6 +6,7 @@ install:
   - nuget install NUnit.Runners -Version 2.6.4 -OutputDirectory testrunner
 notifications:
   email: false
+  slack: illusionsnew:XlmwEF8sgVcZP3RNXJBkGJaY
 script:
   - xbuild /p:Configuration=Release TDD-Katas-project.sln
   - mono ./testrunner/NUnit.Runners.2.6.4/tools/nunit-console.exe ./Src/cs/bin/Release/TDD-Katas-project.dll
